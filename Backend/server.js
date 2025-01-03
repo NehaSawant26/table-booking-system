@@ -4,7 +4,11 @@ const cors = require('cors');
 const Booking = require('./Models/Booking'); 
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin : ["https://table-booking-system-frontend.vercel.app/"],
+  methods : ["POST", "GET"],
+  credentials : true,
+}));
 app.use(express.json());
 
 mongoose.connect('mongodb://localhost:27017/table-booking');
