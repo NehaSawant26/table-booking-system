@@ -5,7 +5,7 @@ const Booking = require('./Models/Booking');
 
 const app = express();
 app.use(cors({
-  origin : ["https://table-booking-system-frontend.vercel.app/"],
+  origin : ["https://table-booking-system-frontend.vercel.app"],
   methods : ["POST", "GET"],
   credentials : true,
 }));
